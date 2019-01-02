@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:layout_editor_absoluteY="25dp">
+
+
+    <TextView
+        android:id="@+id/row_cardName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="TextView"
+        android:textAlignment="viewEnd"
+        android:textColor="@color/milk"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/row_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:drawableLeft="@drawable/ic_person_black_24dp"
+        android:text="TextView"
+        android:textColor="@color/milk"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/row_org"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="52dp"
+        android:drawableLeft="@drawable/ic_business_black_24dp"
+        android:text="TextView"
+        android:textColor="@color/milk"
+        app:layout_constraintBottom_toBottomOf="@+id/row_name"
+        app:layout_constraintStart_toEndOf="@+id/row_name"
+        app:layout_constraintTop_toTopOf="@+id/row_name"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/row_email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:drawableLeft="@drawable/ic_email_black_24dp"
+        android:text="TextView"
+        android:textColor="@color/milk"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/row_addr" />
+
+    <TextView
+        android:id="@+id/row_url"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:drawableLeft="@drawable/ic_public_black_24dp"
+        android:text="TextView"
+        android:textColor="@color/milk"
+        app:layout_constraintTop_toBottomOf="@+id/row_tell" />
+
+    <TextView
+        android:id="@+id/row_tell"
+        android:layout_width="wrap_content"
+        android:layout_height="19dp"
+        android:layout_marginTop="24dp"
+        android:drawableLeft="@drawable/ic_phone_black_24dp"
+        android:text="TextView"
+        android:textColor="@color/milk"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/row_name" />
+
+    <TextView
+        android:id="@+id/row_cell"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="24dp"
+        android:drawableLeft="@drawable/ic_smartphone_black_24dp"
+        android:text="TextView"
+        android:textColor="@color/milk"
+        app:layout_constraintStart_toEndOf="@+id/row_tell"
+        app:layout_constraintTop_toBottomOf="@+id/row_org" />
+
+    <TextView
+        android:id="@+id/row_addr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:drawableLeft="@drawable/ic_place_black_24dp"
+        android:text="TextView"
+        android:textColor="@color/milk"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/row_url" />
+
+</android.support.constraint.ConstraintLayout>
