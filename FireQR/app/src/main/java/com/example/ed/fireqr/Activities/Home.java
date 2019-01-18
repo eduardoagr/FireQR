@@ -40,7 +40,7 @@ public class Home extends AppCompatActivity implements View.OnClickListener {
     DatabaseReference mReef;
     String nameOfCard, name, org, email, url, cell, tell, address;
 
-    @SuppressLint("SetTextI18n")
+    @SuppressLint("SetTextI18n") 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
