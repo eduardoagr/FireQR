@@ -102,8 +102,8 @@ public class Home extends AppCompatActivity implements View.OnClickListener {
         email = data.get(4).replace("EMAIL;TYPE=INTERNET:", "");
         url = data.get(5).replace("URL:", "");
         cell = data.get(6).replace("TEL;TYPE=CELL:", "");
-        tell = data.get(7).replace("TEL:", "");
-        address = data.get(8).replace("ADR:;;", "ADR:").replace("ADR:", "").replace(";", " ");
+        String addressData = data.get(7).replace("ADR:;;", "");
+        address = addressData.replace(";", " ");
 
         mNameOfCard.setText("name of the card: " + nameOfCard);
         mName.setText("Name: " + name);
@@ -153,22 +153,22 @@ public class Home extends AppCompatActivity implements View.OnClickListener {
                     @Override
                     public void onComplete(@NonNull Task<Void> task) {
 
-                        if (task.isSuccessful()){ {
+                        if (task.isSuccessful()) {
+                            {
 
-                            Toast.makeText(Home.this, "Stored", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(Home.this, "Stored", Toast.LENGTH_SHORT).show();
 
-                            mNameOfCard.setText("");
-                            mName.setText("");
-                            mOrg.setText("");
-                            mEmail.setText("");
-                            mUrl.setText("");
-                            mTel.setText("");
-                            mCell.setText("");
-                            mAddress.setText("");
+                                mNameOfCard.setText("");
+                                mName.setText("");
+                                mOrg.setText("");
+                                mEmail.setText("");
+                                mUrl.setText("");
+                                mTel.setText("");
+                                mCell.setText("");
+                                mAddress.setText("");
 
-                            Toast.makeText(Home.this, "The submit button has been disabled", Toast.LENGTH_SHORT).show();
-                            mSubmit.setEnabled(false);
-
+                                Toast.makeText(Home.this, "The submit button has been disabled", Toast.LENGTH_SHORT).show();
+                                mSubmit.setEnabled(false);
 
 
                             }
@@ -181,10 +181,6 @@ public class Home extends AppCompatActivity implements View.OnClickListener {
                         Toast.makeText(Home.this, "error " + e.getMessage(), Toast.LENGTH_SHORT).show();
                     }
                 });
-                break;
-
-            case R.id.home_allCodes:
-                startActivity(new Intent(Home.this, CodesQR.class));
                 break;
         }
     }
