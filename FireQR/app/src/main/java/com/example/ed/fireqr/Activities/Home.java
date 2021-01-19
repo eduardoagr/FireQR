@@ -79,7 +79,6 @@ public class Home extends AppCompatActivity implements View.OnClickListener {
         mTel = findViewById(R.id.home_tel);
         mCell = findViewById(R.id.home_cell);
         mAddress = findViewById(R.id.home_adr);
-        mViewAllCodes = findViewById(R.id.home_allCodes);
 
         mSubmit.setOnClickListener(this);
         mViewAllCodes.setOnClickListener(this);
